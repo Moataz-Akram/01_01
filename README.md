@@ -10,7 +10,7 @@
 
 - Now add the new repository you created as a remote for the local repo.
 
-        git remote add origin git@github.com:YOUR_GITHUB_USER_NAME_HERE/exercise-files.git
+        git remote add origin git@github.com:Moataz-Akram/exercise-files.git
 
 - After the remote is added, push the files to the remote.
 
