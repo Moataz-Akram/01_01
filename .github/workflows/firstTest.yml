@@ -1,0 +1,29 @@
+# This is a basic workflow to help you get started with Actions
+
+name: firstTest
+
+# Controls when the workflow will run
+on: push
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  job_1:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Runs a single command using the runners shell
+      - run: echo "$(date +'%Y-%m-%d') job 1"
+  job_2:
+    runs-on: windows-latest
+    steps:
+      - run: echo "$(date +'%Y-%m-%d') job 2"
+  job_3:
+    runs-on: macos-latest
+    steps:
+      - run: echo "$(date +'%Y-%m-%d') job 3"
+  job_4:
+    needs: [job_1, job_2, job_3]
+    runs-on: macos-latest
+    steps:
+      - run: echo "$(date +'%Y-%m-%d') job 4"
